@@ -1,0 +1,29 @@
+.clients .card-set {
+  --card-items: 6;
+}
+
+.clients-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  border: 1px solid var(--clients-border-color);
+  border-radius: 4px;
+  color: var(--clients-border-color);
+
+  transition: border 250ms var(--time-function), color 250ms var(--time-function);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+  transition: fill 250ms var(--time-function);
+  .clients-link:hover &,
+  .clients-link:focus & {
+    fill: currentColor;
+  }
+}
