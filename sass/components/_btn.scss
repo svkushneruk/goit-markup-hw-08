@@ -1,20 +1,19 @@
 .btn {
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  min-height: 50px;
+  letter-spacing: 0.06em;
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
 
-    padding: 10px 32px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    min-height: 50px;
-    letter-spacing: 0.06em;
-    color: var(--light-color);
-    background-color: var(--accent-color);
-    border: none;
-    border-radius: 4px;
-
-    transition: background-color 250ms var(--time-function), box-shadow 250ms var(--time-function);
-    &:hover,
-    &:focus {
+  transition: background-color 250ms var(--time-function), box-shadow 250ms var(--time-function);
+  &:hover,
+  &:focus {
     background-color: var(--hover-btn-color);
     box-shadow: var(--btn-shadow);
-    }
+  }
 }

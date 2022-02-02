@@ -1,5 +1,11 @@
-.clients .card-set {
-  --card-items: 6;
+.clients-list {
+  --card-items: 2;
+  @media screen and (min-width: 768px) {
+    --card-items: 3;
+  }
+  @media screen and (min-width: 1200px) {
+    --card-items: 6;
+  }
 }
 
 .clients-list__link {

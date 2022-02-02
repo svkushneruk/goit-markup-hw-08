@@ -100,23 +100,55 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: 30px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--main-title-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
+
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .card-set {
@@ -247,8 +279,8 @@ body {
 
 .hero {
   background-color: var(--hero-bg-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(to right, var(--hero-gradient-color)), url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover, auto;
@@ -256,15 +288,29 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 .hero__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__btn {
@@ -272,7 +318,20 @@ body {
 }
 
 .about-list {
-  --card-items: 4;
+  --card-items: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-list {
+    --card-items: 2;
+    --card-set-gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-list {
+    --card-items: 4;
+  }
 }
 
 .about-list__icon-wrapper {
@@ -294,8 +353,20 @@ body {
   color: var(--main-title-color);
 }
 
+@media screen and (max-width: 768px) {
+  .about-list__title {
+    text-align: center;
+  }
+}
+
 .examples {
   padding-top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .examples {
+    display: none;
+  }
 }
 
 .examples-list__item {
@@ -353,8 +424,9 @@ body {
   background-color: var(--light-bg-color);
 }
 
-.team .card-set__item {
-  --card-items: 4;
+.team-list {
+  --card-items: 0;
+  --card-set-gap: 0;
 }
 
 .team-list__item {
@@ -391,8 +463,20 @@ body {
   margin-bottom: 10px;
 }
 
-.clients .card-set {
-  --card-items: 6;
+.clients-list {
+  --card-items: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list {
+    --card-items: 3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    --card-items: 6;
+  }
 }
 
 .clients-list__link {

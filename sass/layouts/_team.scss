@@ -2,8 +2,9 @@
   background-color: var(--light-bg-color);
 }
 
-.team .card-set__item {
-  --card-items: 4;
+.team-list {
+  --card-items: 0;
+  --card-set-gap: 0;
 }
 
 .team-list__item {

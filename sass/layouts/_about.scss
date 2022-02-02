@@ -1,5 +1,12 @@
 .about-list {
-  --card-items: 4;
+  --card-items: 0;
+  @media screen and (min-width: 768px) {
+    --card-items: 2;
+    --card-set-gap: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    --card-items: 4;
+  }
 }
 
 .about-list__icon-wrapper {
@@ -19,4 +26,7 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--main-title-color);
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
