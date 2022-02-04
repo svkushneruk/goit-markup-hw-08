@@ -64,7 +64,7 @@
     </header> -->
 
     <main>
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container">
           <h1 class="hero__title">
             Эффективные решения <br />
@@ -72,9 +72,9 @@
           </h1>
           <button type="button" class="btn hero__btn" data-modal-open>Заказать услугу</button>
         </div>
-      </section>
+      </section> -->
 
-      <section class="about section">
+      <!-- <section class="about section">
         <div class="container">
           <ul class="about-list card-set list">
             <li class="about-list__item card-set__item">
@@ -123,9 +123,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <section class="examples section">
+      <!-- <section class="examples section">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="examples-list card-set list">
@@ -148,14 +148,29 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <!-- <section class="team section">
+      <section class="team section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list card-set list">
             <li class="team-list__item card-set__item">
-              <img src="./images/igor.jpg" alt="Игорь" width="270" class="team-list__img" />
+              <picture class="team-list__thumb">
+                <source
+                  srcset="./images/igor.jpg 1x, ./images/igor@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/igor-tab.jpg 1x, ./images/igor-tab@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/igor-mob.jpg 1x, ./images/igor-mob@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/igor.jpg" alt="Игорь" class="team-list__img" />
+              </picture>
+
               <div class="team-list__content">
                 <h3 class="team-list__persone-title">Игорь Демьяненко</h3>
                 <p class="team-list__text">Product Designer</p>
@@ -192,7 +207,21 @@
               </div>
             </li>
             <li class="team-list__item card-set__item">
-              <img src="./images/olga.jpg" alt="Ольга" width="270" class="team-list__img" />
+              <picture class="team-list__thumb">
+                <source
+                  srcset="./images/olga.jpg 1x, ./images/olga@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/olga-tab.jpg 1x, ./images/olga-tab@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/olga-mob.jpg 1x, ./images/olga-mob@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/olga.jpg" alt="Ольга" class="team-list__img" />
+              </picture>
               <div class="team-list__content">
                 <h3 class="team-list__persone-title">Ольга Репина</h3>
                 <p class="team-list__text">Frontend Developer</p>
@@ -229,7 +258,21 @@
               </div>
             </li>
             <li class="team-list__item card-set__item">
-              <img src="./images/nikolay.jpg" alt="Николай" width="270" class="team-list__img" />
+              <picture class="team-list__thumb">
+                <source
+                  srcset="./images/nikolay.jpg 1x, ./images/nikolay@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/nikolay-tab.jpg 1x, ./images/nikolay-tab@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/nikolay-mob.jpg 1x, ./images/nikolay-mob@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/nikolay.jpg" alt="Николай" class="team-list__img" />
+              </picture>
               <div class="team-list__content">
                 <h3 class="team-list__persone-title">Николай Тарасов</h3>
                 <p class="team-list__text">Marketing</p>
@@ -266,7 +309,21 @@
               </div>
             </li>
             <li class="team-list__item card-set__item">
-              <img src="./images/mihail.jpg" alt="Михаил" width="270" class="team-list__img" />
+              <picture class="team-list__thumb">
+                <source
+                  srcset="./images/mihail.jpg 1x, ./images/mihail@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/mihail-tab.jpg 1x, ./images/mihail-tab@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mihail-mob.jpg 1x, ./images/mihail-mob@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/mihail.jpg" alt="Михаил" class="team-list__img" />
+              </picture>
               <div class="team-list__content">
                 <h3 class="team-list__persone-title">Михаил Ермаков</h3>
                 <p class="team-list__text">UI Designer</p>
@@ -304,9 +361,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
-      <section class="clients section">
+      <!-- <section class="clients section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients-list card-set list">
@@ -354,10 +411,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container container--footer">
         <div class="footer__row">
           <div class="footer__cont-item">
@@ -435,7 +492,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
