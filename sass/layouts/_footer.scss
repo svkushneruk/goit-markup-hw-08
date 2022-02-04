@@ -6,16 +6,52 @@
 
 .container--footer {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
-.footer__cont-item:not(:last-child) {
-  margin-right: 70px;
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: auto;
+  }
 }
 
-.footer__cont-item:last-child {
-  margin-left: auto;
+.footer__cont-item {
+  width: 100%;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 1200px) {
+    .footer__row & {
+      margin-right: 70px;
+    }
+  }
 }
+
+// .footer__cont-item:last-child {
+//   width: 100%;
+//   // margin-left: auto;
+// }
 
 .footer__logo {
   display: block;
@@ -34,6 +70,9 @@
   color: var(--address-link-color);
 
   transition: color 250ms var(--time-function);
+  &--light {
+    color: var(--light-color);
+  }
   &:hover,
   &:focus {
     color: var(--light-color);
@@ -55,6 +94,12 @@
   --card-items: 4;
 }
 
+.footer .social-list {
+  width: 216px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer .social-list__link {
   background: var(--footer-icon-bg);
   color: var(--light-color);
@@ -70,13 +115,26 @@
 
 .mailing-form__field {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .mailing-form__input {
-  display: inline-block;
+  display: block;
   padding: 15px 16px;
-  margin-right: 12px;
-  width: 358px;
+  margin-bottom: 20px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
   outline: none;
 
   background-color: transparent;
@@ -100,5 +158,6 @@
   padding: 10px 28px;
   display: flex;
   align-items: center;
-  margin-left: auto;
+  max-width: 200px;
+  // margin-left: auto;
 }
