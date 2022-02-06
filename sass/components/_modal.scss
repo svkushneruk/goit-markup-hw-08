@@ -14,7 +14,13 @@
 
 .modal {
   position: absolute;
-  width: 528px;
+  width: 100%;
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
   min-height: 581px;
   padding: 40px;
 
@@ -159,6 +165,14 @@
   .modal-form__check:checked + & {
     background: var(--accent-color);
     border: 2px solid var(--accent-color);
+  }
+}
+
+.modal-form__agree-text {
+  font-size: 12px;
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
   }
 }
 
