@@ -1,8 +1,7 @@
 .about-list {
-  --card-items: 0;
+  --card-items: 1;
   @media screen and (min-width: 768px) {
     --card-items: 2;
-    --card-set-gap: 30px;
   }
   @media screen and (min-width: 1200px) {
     --card-items: 4;

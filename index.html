@@ -34,6 +34,7 @@
             class="menu-button js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
+            aria-label="Кнопка мобильного меню"
           >
             <svg
               class="menu-button__icon menu-button__icon--is-close"
@@ -53,7 +54,7 @@
               <a href="./portfolio.html" class="header-nav__link">Портфолио</a>
             </li>
             <li class="header-nav__item">
-              <a href="" class="header-nav__link">Контакты</a>
+              <a href="#" class="header-nav__link">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -69,7 +70,11 @@
           </li>
           <li class="header-contacts__item">
             <a href="tel:+380961111111" class="header-nav__link">
-              <svg class="header-contacts__icon header-contacts__icon--phone" width="10" height="14">
+              <svg
+                class="header-contacts__icon header-contacts__icon--phone"
+                width="10"
+                height="14"
+              >
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11
@@ -78,7 +83,11 @@
         </ul>
 
         <div class="mob-menu js-menu-container" id="mobile-menu">
-          <button type="button" class="mob-menu__btn js-close-menu">
+          <button
+            type="button"
+            class="mob-menu__btn js-close-menu"
+            aria-label="Кнопка закрытия мобильного меню"
+          >
             <svg class="mob-menu__icon" width="18.67" height="18.67">
               <use href="./images/icons.svg#icon-close-btn"></use>
             </svg>
@@ -92,7 +101,7 @@
                 <a href="./portfolio.html" class="pages-list__link">Портфолио</a>
               </li>
               <li class="pages-list__item">
-                <a href="" class="pages-list__link">Контакты</a>
+                <a href="#" class="pages-list__link">Контакты</a>
               </li>
             </ul>
 
@@ -115,16 +124,16 @@
 
               <ul class="menu-box__item social-network-list list">
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">Instagram</a>
+                  <a href="#" class="social-network-list__link">Instagram</a>
                 </li>
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">Twitter</a>
+                  <a href="#" class="social-network-list__link">Twitter</a>
                 </li>
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">Facebook</a>
+                  <a href="#" class="social-network-list__link">Facebook</a>
                 </li>
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">LinkedIn</a>
+                  <a href="#" class="social-network-list__link">LinkedIn</a>
                 </li>
               </ul>
             </div>
@@ -146,6 +155,7 @@
 
       <section class="about section">
         <div class="container">
+          <h2 class="visually-hidden">О нас</h2>
           <ul class="about-list card-set list">
             <li class="about-list__item card-set__item">
               <div class="about-list__icon-wrapper">
@@ -204,16 +214,32 @@
                 src="./images/computer.jpg"
                 alt="Компьютер"
                 width="370"
+                height="294"
                 class="examples-list__img"
+                loading="lazy"
               />
               <h3 class="examples-list__subtitle">Десктопные приложения</h3>
             </li>
             <li class="card-set__item examples-list__item">
-              <img src="./images/phone.jpg" alt="Телефон" width="370" class="examples-list__img" />
+              <img
+                src="./images/phone.jpg"
+                alt="Телефон"
+                width="370"
+                height="294"
+                class="examples-list__img"
+                loading="lazy"
+              />
               <h3 class="examples-list__subtitle">Мобильные приложения</h3>
             </li>
             <li class="card-set__item examples-list__item">
-              <img src="./images/tablet.jpg" alt="Планшет" width="370" class="examples-list__img" />
+              <img
+                src="./images/tablet.jpg"
+                alt="Планшет"
+                width="370"
+                height="294"
+                class="examples-list__img"
+                loading="lazy"
+              />
               <h3 class="examples-list__subtitle">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -227,18 +253,43 @@
             <li class="team-list__item card-set__item">
               <picture class="team-list__thumb">
                 <source
-                  srcset="./images/igor.jpg 1x , ./images/igor@2x.jpg 2x"
+                  srcset="./images/igor.webp 1x, ./images/igor@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="./images/igor-tab.jpg 1x, ./images/igor-tab@2x.jpg 2x"
+                  srcset="./images/igor.jpg 1x, ./images/igor@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/igor-tab.webp 1x, ./images/igor-tab@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="./images/igor-mob.jpg 1x, ./images/igor-mob@2x.jpg 2x"
-                  media="(max-width: 768px)"
+                  srcset="./images/igor-tab.jpg 1x, ./images/igor-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
                 />
-                <img src="./images/igor.jpg" alt="Игорь" class="team-list__img" />
+                <source
+                  srcset="./images/igor-mob.webp 1x, ./images/igor-mob@2x.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/igor-mob.jpg 1x, ./images/igor-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/igor.jpg"
+                  alt="Игорь"
+                  class="team-list__img"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
               </picture>
 
               <div class="team-list__content">
@@ -246,28 +297,52 @@
                 <p class="team-list__text">Product Designer</p>
                 <ul class="social-list list card-set">
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на инстаграм"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на твитер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на фейсбук"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-fb"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на линкедин"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -279,46 +354,95 @@
             <li class="team-list__item card-set__item">
               <picture class="team-list__thumb">
                 <source
-                  srcset="./images/olga.jpg 1x, ./images/olga@2x.jpg 2x"
+                  srcset="./images/olga.webp 1x, ./images/olga@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="./images/olga-tab.jpg 1x, ./images/olga-tab@2x.jpg 2x"
+                  srcset="./images/olga.jpg 1x, ./images/olga@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/olga-tab.webp 1x, ./images/olga-tab@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="./images/olga-mob.jpg 1x, ./images/olga-mob@2x.jpg 2x"
-                  media="(max-width: 768px)"
+                  srcset="./images/olga-tab.jpg 1x, ./images/olga-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
                 />
-                <img src="./images/olga.jpg" alt="Ольга" class="team-list__img" />
+                <source
+                  srcset="./images/olga-mob.webp 1x, ./images/olga-mob@2x.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/olga-mob.jpg 1x, ./images/olga-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/olga.jpg"
+                  alt="Ольга"
+                  class="team-list__img"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
               </picture>
               <div class="team-list__content">
                 <h3 class="team-list__persone-title">Ольга Репина</h3>
                 <p class="team-list__text">Frontend Developer</p>
                 <ul class="social-list list card-set">
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на инстаграм"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на твитер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на фейсбук"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-fb"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на лиинкедин"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -330,46 +454,95 @@
             <li class="team-list__item card-set__item">
               <picture class="team-list__thumb">
                 <source
-                  srcset="./images/nikolay.jpg 1x, ./images/nikolay@2x.jpg 2x"
+                  srcset="./images/nikolay.webp 1x, ./images/nikolay@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="./images/nikolay-tab.jpg 1x, ./images/nikolay-tab@2x.jpg 2x"
+                  srcset="./images/nikolay.jpg 1x, ./images/nikolay@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/nikolay-tab.webp 1x, ./images/nikolay-tab@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="./images/nikolay-mob.jpg 1x, ./images/nikolay-mob@2x.jpg 2x"
-                  media="(max-width: 768px)"
+                  srcset="./images/nikolay-tab.jpg 1x, ./images/nikolay-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
                 />
-                <img src="./images/nikolay.jpg" alt="Николай" class="team-list__img" />
+                <source
+                  srcset="./images/nikolay-mob.webp 1x, ./images/nikolay-mob@2x.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/nikolay-mob.jpg 1x, ./images/nikolay-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/nikolay.jpg"
+                  alt="Николай"
+                  class="team-list__img"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
               </picture>
               <div class="team-list__content">
                 <h3 class="team-list__persone-title">Николай Тарасов</h3>
                 <p class="team-list__text">Marketing</p>
                 <ul class="social-list list card-set">
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на инстаграм"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на твитер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на фейсбук"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-fb"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на линкедин"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -381,46 +554,95 @@
             <li class="team-list__item card-set__item">
               <picture class="team-list__thumb">
                 <source
-                  srcset="./images/mihail.jpg 1x, ./images/mihail@2x.jpg 2x"
+                  srcset="./images/mihail.webp 1x, ./images/mihail@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="./images/mihail-tab.jpg 1x, ./images/mihail-tab@2x.jpg 2x"
+                  srcset="./images/mihail.jpg 1x, ./images/mihail@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/mihail-tab.webp 1x, ./images/mihail-tab@2x.webp 2x"
+                  type="image/webp"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="./images/mihail-mob.jpg 1x, ./images/mihail-mob@2x.jpg 2x"
-                  media="(max-width: 768px)"
+                  srcset="./images/mihail-tab.jpg 1x, ./images/mihail-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
                 />
-                <img src="./images/mihail.jpg" alt="Михаил" class="team-list__img" />
+                <source
+                  srcset="./images/mihail-mob.webp 1x, ./images/mihail-mob@2x.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/mihail-mob.jpg 1x, ./images/mihail-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mihail.jpg"
+                  alt="Михаил"
+                  class="team-list__img"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
               </picture>
               <div class="team-list__content">
                 <h3 class="team-list__persone-title">Михаил Ермаков</h3>
                 <p class="team-list__text">UI Designer</p>
                 <ul class="social-list list card-set">
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на инстаграм"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на твитер"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на фейсбук"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-fb"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list__item card-set__item">
-                    <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                    <a
+                      href="#"
+                      class="social-list__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label="Ссылка на линкедин"
+                    >
                       <svg class="social-list__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -438,42 +660,78 @@
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients-list card-set list">
             <li class="card-set__item clients-list__item">
-              <a href="" class="clients-list__link" target="_blank" rel="noreferrer noopener">
+              <a
+                href="#"
+                class="clients-list__link"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Ссылка на компанию"
+              >
                 <svg class="clients-list__icon" width="41" height="46.7">
                   <use href="./images/icons.svg#icon-yaco"></use>
                 </svg>
               </a>
             </li>
             <li class="card-set__item clients-list__item">
-              <a href="" class="clients-list__link" target="_blank" rel="noreferrer noopener">
+              <a
+                href="#"
+                class="clients-list__link"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Ссылка на компанию"
+              >
                 <svg class="clients-list__icon" width="40" height="52">
                   <use href="./images/icons.svg#icon-tagline-here"></use>
                 </svg>
               </a>
             </li>
             <li class="card-set__item clients-list__item">
-              <a href="" class="clients-list__link" target="_blank" rel="noreferrer noopener">
+              <a
+                href="#"
+                class="clients-list__link"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Ссылка на компанию"
+              >
                 <svg class="clients-list__icon" width="43.46" height="41.18">
                   <use href="./images/icons.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
             <li class="card-set__item clients-list__item">
-              <a href="" class="clients-list__link" target="_blank" rel="noreferrer noopener">
+              <a
+                href="#"
+                class="clients-list__link"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Ссылка на компанию"
+              >
                 <svg class="clients-list__icon" width="84.44" height="40.62">
                   <use href="./images/icons.svg#icon-foster-peters"></use>
                 </svg>
               </a>
             </li>
             <li class="card-set__item clients-list__item">
-              <a href="" class="clients-list__link" target="_blank" rel="noreferrer noopener">
+              <a
+                href="#"
+                class="clients-list__link"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Ссылка на компанию"
+              >
                 <svg class="clients-list__icon" width="62.54" height="45.43">
                   <use href="./images/icons.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
             <li class="card-set__item clients-list__item">
-              <a href="" class="clients-list__link" target="_blank" rel="noreferrer noopener">
+              <a
+                href="#"
+                class="clients-list__link"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Ссылка на компанию"
+              >
                 <svg class="clients-list__icon" width="93.79" height="43.93">
                   <use href="./images/icons.svg#icon-tag-line"></use>
                 </svg>
@@ -516,28 +774,52 @@
             <b class="footer__title">присоединяйтесь</b>
             <ul class="social-list list card-set">
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на инстаграм"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на твитер"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на фейсбук"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на линкедин"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-linkedin"></use>
                   </svg>
@@ -566,7 +848,12 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn" data-modal-close>
+        <button
+          type="button"
+          class="modal-close-btn"
+          data-modal-close
+          aria-label="Кнопка закрытия модального окна"
+        >
           <svg class="modal-close-btn__icon" width="11" height="11">
             <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>

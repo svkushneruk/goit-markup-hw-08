@@ -33,6 +33,7 @@
             class="menu-button js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
+            aria-label="Кнопка открытия мобильного меню"
           >
             <svg
               class="menu-button__icon menu-button__icon--is-close"
@@ -52,7 +53,7 @@
               <a href="./portfolio.html" class="header-nav__link current">Портфолио</a>
             </li>
             <li class="header-nav__item">
-              <a href="" class="header-nav__link">Контакты</a>
+              <a href="#" class="header-nav__link">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -77,7 +78,11 @@
         </ul>
 
         <div class="mob-menu js-menu-container" id="mobile-menu">
-          <button type="button" class="mob-menu__btn js-close-menu">
+          <button
+            type="button"
+            class="mob-menu__btn js-close-menu"
+            aria-label="Кнопка закрытия мобильного меню"
+          >
             <svg class="mob-menu__icon" width="18.67" height="18.67">
               <use href="./images/icons.svg#icon-close-btn"></use>
             </svg>
@@ -85,13 +90,13 @@
           <div class="mob-menu__wrap mobile-menu">
             <ul class="mobile-menu__item pages-list list">
               <li class="pages-list__item">
-                <a href="./index.html" class="pages-list__link current">Студия</a>
+                <a href="./index.html" class="pages-list__link">Студия</a>
               </li>
               <li class="pages-list__item">
-                <a href="./portfolio.html" class="pages-list__link">Портфолио</a>
+                <a href="./portfolio.html" class="pages-list__link current">Портфолио</a>
               </li>
               <li class="pages-list__item">
-                <a href="" class="pages-list__link">Контакты</a>
+                <a href="#" class="pages-list__link">Контакты</a>
               </li>
             </ul>
 
@@ -114,16 +119,16 @@
 
               <ul class="menu-box__item social-network-list list">
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">Instagram</a>
+                  <a href="#" class="social-network-list__link">Instagram</a>
                 </li>
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">Twitter</a>
+                  <a href="#" class="social-network-list__link">Twitter</a>
                 </li>
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">Facebook</a>
+                  <a href="#" class="social-network-list__link">Facebook</a>
                 </li>
                 <li class="social-network-list__item">
-                  <a href="" class="social-network-list__link">LinkedIn</a>
+                  <a href="#" class="social-network-list__link">LinkedIn</a>
                 </li>
               </ul>
             </div>
@@ -156,12 +161,26 @@
 
           <ul class="portfolio__cards-list card-set list cards-list">
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/laptop-screen.webp 1x, ./images/laptop-screen@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/laptop-screen.jpg 1x, ./images/laptop-screen@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/laptop-screen-tab.webp    1x,
+                        ./images/laptop-screen-tab@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="
@@ -169,18 +188,30 @@
                         ./images/laptop-screen-tab@2x.jpg 2x
                       "
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/laptop-screen-mob.webp    1x,
+                        ./images/laptop-screen-mob@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="
                         ./images/laptop-screen-mob.jpg    1x,
                         ./images/laptop-screen-mob@2x.jpg 2x
                       "
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
                     <img
                       src="./images/laptop-screen.jpg"
                       alt="Экран ноутбука"
                       class="cards-list__img"
+                      width="370"
+                      height="294"
                     />
                   </picture>
 
@@ -197,15 +228,32 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
+                    <source
+                      srcset="
+                        ./images/bucksketball-players.webp    1x,
+                        ./images/bucksketball-players@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
                     <source
                       srcset="
                         ./images/bucksketball-players.jpg    1x,
                         ./images/bucksketball-players@2x.jpg 2x
                       "
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/bucksketball-players-tab.webp    1x,
+                        ./images/bucksketball-players-tab@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="
@@ -213,18 +261,31 @@
                         ./images/bucksketball-players-tab@2x.jpg 2x
                       "
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/bucksketball-players-mob.webp    1x,
+                        ./images/bucksketball-players-mob@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="
                         ./images/bucksketball-players-mob.jpg    1x,
                         ./images/bucksketball-players-mob@2x.jpg 2x
                       "
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
                     <img
                       src="./images/bucksketball-players.jpg"
                       alt="Баскетболисты"
                       class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
                     />
                   </picture>
 
@@ -241,22 +302,53 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/seafoot-logo.webp 1x, ./images/seafoot-logo@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/seafoot-logo.jpg 1x, ./images/seafoot-logo@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafoot-logo-tab.webp    1x,
+                        ./images/seafoot-logo-tab@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/seafoot-logo-tab.jpg 1x, ./images/seafoot-logo-tab@2x.jpg 2x"
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafoot-logo-mob.webp    1x,
+                        ./images/seafoot-logo-mob@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/seafoot-logo-mob.jpg 1x, ./images/seafoot-logo-mob@2x.jpg 2x"
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
-                    <img src="./images/seafoot-logo.jpg" alt="Seafood" class="cards-list__img" />
+                    <img
+                      src="./images/seafoot-logo.jpg"
+                      alt="Seafood"
+                      class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
                   </picture>
 
                   <p class="cards-list__overlay">
@@ -272,22 +364,47 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/headphones.webp 1x, ./images/headphones@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/headphones.jpg 1x, ./images/headphones@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/headphones-tab.webp 1x, ./images/headphones-tab@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/headphones-tab.jpg 1x, ./images/headphones-tab@2x.jpg 2x"
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/headphones-mob.webp 1x, ./images/headphones-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/headphones-mob.jpg 1x, ./images/headphones-mob@2x.jpg 2x"
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
-                    <img src="./images/headphones.jpg" alt="Наушники" class="cards-list__img" />
+                    <img
+                      src="./images/headphones.jpg"
+                      alt="Наушники"
+                      class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
                   </picture>
 
                   <p class="cards-list__overlay">
@@ -303,22 +420,47 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/boxes.webp 1x, ./images/boxes@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/boxes-tab.webp 1x, ./images/boxes-tab@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/boxes-tab.jpg 1x, ./images/boxes-tab@2x.jpg 2x"
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/boxes-mob.webp 1x, ./images/boxes-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/boxes-mob.jpg 1x, ./images/boxes-mob@2x.jpg 2x"
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
-                    <img src="./images/boxes.jpg" alt="Коробки" class="cards-list__img" />
+                    <img
+                      src="./images/boxes.jpg"
+                      alt="Коробки"
+                      class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
                   </picture>
 
                   <p class="cards-list__overlay">
@@ -334,22 +476,47 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/screen.webp 1x, ./images/screen@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/screen.jpg 1x, ./images/screen@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/screen-tab.webp 1x, ./images/screen-tab@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/screen-tab.jpg 1x, ./images/screen-tab@2x.jpg 2x"
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/screen-mob.webp 1x, ./images/screen-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/screen-mob.jpg 1x, ./images/screen-mob@2x.jpg 2x"
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
-                    <img src="./images/screen.jpg" alt="Компьютер" class="cards-list__img" />
+                    <img
+                      src="./images/screen.jpg"
+                      alt="Компьютер"
+                      class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
                   </picture>
 
                   <p class="cards-list__overlay">
@@ -365,22 +532,47 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/book.webp 1x, ./images/book@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/book.jpg 1x, ./images/book@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/book-tab.webp 1x, ./images/book-tab@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/book-tab.jpg 1x, ./images/book-tab@2x.jpg 2x"
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/book-mob.webp 1x, ./images/book-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/book-mob.jpg 1x, ./images/book-mob@2x.jpg 2x"
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
-                    <img src="./images/book.jpg" alt="Книга" class="cards-list__img" />
+                    <img
+                      src="./images/book.jpg"
+                      alt="Книга"
+                      class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
                   </picture>
 
                   <p class="cards-list__overlay">
@@ -396,22 +588,47 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/lab.webp 1x, ./images/lab@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/lab.jpg 1x, ./images/lab@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/lab-tab.webp 1x, ./images/lab-tab@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/lab-tab.jpg 1x, ./images/lab-tab@2x.jpg 2x"
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/lab-mob.webp 1x, ./images/lab-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/lab-mob.jpg 1x, ./images/lab-mob@2x.jpg 2x"
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
-                    <img src="./images/lab.jpg" alt="Логотип" class="cards-list__img" />
+                    <img
+                      src="./images/lab.jpg"
+                      alt="Логотип"
+                      class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
                   </picture>
 
                   <p class="cards-list__overlay">
@@ -427,22 +644,47 @@
               </a>
             </li>
             <li class="cards-list__item card-set__item">
-              <a href="" class="cards-list__link" target="_blank" rel="noreferrer noopener">
+              <a href="#" class="cards-list__link" target="_blank" rel="noreferrer noopener">
                 <div class="cards-list__img-wrap">
                   <picture>
                     <source
+                      srcset="./images/notebook.webp 1x, ./images/notebook@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
                       srcset="./images/notebook.jpg 1x, ./images/notebook@2x.jpg 2x"
                       media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/notebook-tab.webp 1x, ./images/notebook-tab@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/notebook-tab.jpg 1x, ./images/notebook-tab@2x.jpg 2x"
                       media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/notebook-mob.webp 1x, ./images/notebook-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
                     />
                     <source
                       srcset="./images/notebook-mob.jpg 1x, ./images/notebook-mob@2x.jpg 2x"
-                      media="(max-width: 768px)"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
                     />
-                    <img src="./images/notebook.jpg" alt="Ноутбук" class="cards-list__img" />
+                    <img
+                      src="./images/notebook.jpg"
+                      alt="Ноутбук"
+                      class="cards-list__img"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
                   </picture>
 
                   <p class="cards-list__overlay">
@@ -494,28 +736,52 @@
             <b class="footer__title">присоединяйтесь</b>
             <ul class="social-list list card-set">
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на инстаграм"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на твитер"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на фейсбук"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item card-set__item">
-                <a href="" class="social-list__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="#"
+                  class="social-list__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Ссылка на линкедин"
+                >
                   <svg class="social-list__icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-linkedin"></use>
                   </svg>
