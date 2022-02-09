@@ -20,10 +20,11 @@
 
   // Закрываем мобильное меню на более широких экранах
   // в случае изменения ориентации устройства.
-  window.matchMedia('(min-width: 768px)').addEventListener('resize', e => {
-    if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {      
+      mobileMenu.classList.remove('is-open');
+      openMenuBtn.setAttribute('aria-expanded', false);
+      bodyScrollLock.enableBodyScroll(document.body);
+    };
   });
 })();

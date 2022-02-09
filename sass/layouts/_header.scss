@@ -74,18 +74,20 @@
   position: relative;
   display: block;
   font-weight: 500;
-  font-size: 12px;
-  line-height: (14 / 12);
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.14;
-  }
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms var(--time-function);
   &:hover,
   &:focus,
   &.current {
     color: var(--accent-color);
+  }
+  @media screen and (max-width: 1199px) {
+    .header-contacts & {
+      font-size: 12px;
+      line-height: (14 / 12);
+    }
   }
 }
 

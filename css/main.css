@@ -393,21 +393,21 @@ body {
   position: relative;
   display: block;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1.16667;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms var(--time-function);
 }
 
-@media screen and (min-width: 1200px) {
-  .header-nav__link {
-    font-size: 14px;
-    line-height: 1.14;
-  }
-}
-
 .header-nav__link:hover, .header-nav__link:focus, .header-nav__link.current {
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .header-contacts .header-nav__link {
+    font-size: 12px;
+    line-height: 1.16667;
+  }
 }
 
 .header-nav__link.current:after {
